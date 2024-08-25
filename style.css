@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Roboto' ;
+}
+
+/* header  */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+    
+    
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-left img{
+    width: 100px;
+    margin-left: 15px;
+}
+
+.header i{
+    padding: 0px 11px;
+    cursor: pointer;
+}
+
+.header-search form{
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.header-search input{
+    width: 500px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+   
+}
+
+.header-search button{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+
+}
+
+.header-icons{
+    margin-right: 30px;
+}
+
+/* header end  */
+
+/*main body start*/
+
+.main-body{
+    height: calc(100vh-70px);
+    display: flex;
+    overflow: hidden;
+    
+
+}
+
+
+/*side bar*/
+.side-bar{
+    height: 100%;
+    width: 230px;
+    background-color: white;
+    overflow-y: scroll;
+    
+
+}
+
+.side-bar-categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.side-bar-category{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+
+
+}
+
+.side-bar-category span{
+    margin-left: 15px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    
+}
+
+.side-bar-category :hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.side-bar::-webkit-scrollbar{
+    display: none;
+}
+
+hr{
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+/*videos*/
+
+.videos{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd ;
+    /* overflow: scroll; */
+   
+    
+
+}
+
+.videos-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* margin-left: 5rem; */
+     
+}
+
+.video{
+    width: 310px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.video-thumbnail{
+    width: 100%;
+    height: 170px;
+}
+
+.video-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+}
+
+.video-details{
+    display: flex;
+    margin-top: 10px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title h3{
+    color: rgb(3, 3, 3);
+    line-height: 18px;
+    font: 14px 'Roboto';
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.title a,
+span{
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 14px ;
+    line-height: 3vh;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(3, 3, 3);
+
+}
+
+/* extra for video-details section */
+.media{
+    display: flex;
+    flex-direction: column;
+}
+
+/*video end*/
+
+
+/*main body end*/
+
+
+@media (max-width:425px) {
+    
+    .header-search{
+        display: none;
+    }
+
+    .side-bar{
+        display: none;
+    }
+    .header-icons .material-symbols-outlined{
+        display: none;
+    }
+    .header-icons .display-this{
+        display: inline;
+    }
+    .header-icons{
+        margin-right: -20px;
+    }
+    
+    .media{
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    
+}
+
+@media  (max-width: 768px)
+{
+ .header-search{
+    display: none;
+
+ }
+
+ .side-bar{
+    display: none;
+ }
+
+ .show-sidebar{
+    display: inline;
+ }
+ .media{
+    flex-direction: row;
+    gap: 12px;
+}
+
+    
+}
+
+
+@media (max-width:965px) {
+    .header-search{
+        width: 300px;
+    }
+    .media{
+        flex-direction: row;
+        gap: 12px;
+    }
+
+}
+
+
+
+
